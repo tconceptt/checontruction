@@ -74,9 +74,9 @@ export default function Footer() {
           <div className="lg:col-span-3 lg:col-start-10">
             <h3 className="text-white font-black uppercase tracking-widest text-sm mb-8">Quick Links</h3>
             <ul className="space-y-5 text-sm font-black tracking-widest uppercase text-gray-500">
-              <li><Link href="#services" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Our Expertise</Link></li>
-              <li><Link href="#projects" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Selected Works</Link></li>
-              <li><Link href="#about" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Company Profile</Link></li>
+              <li><Link href="/services" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Our Expertise</Link></li>
+              <li><Link href="/projects" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Selected Works</Link></li>
+              <li><Link href="/#about" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Company Profile</Link></li>
               <li><Link href="#" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Careers</Link></li>
             </ul>
           </div>
