@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactModal from "@/components/ContactModal";
+import { absoluteUrl, siteConfig } from "@/lib/site-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://checonstruction.et'),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: 'Che Construction PLC — Ethiopia',
+    default: 'Che Construction PLC | Construction Company in Ethiopia',
     template: '%s | Che Construction PLC',
   },
-  description: 'Best construction company in Ethiopia. Building construction, road infrastructure, and renovation services across Addis Ababa, Hawassa, Bahir Dar, and Dire Dawa.',
+  description: siteConfig.defaultDescription,
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_ET',
     siteName: 'Che Construction PLC',
-    images: [{ url: '/opengraph-image.jpg', width: 1200, height: 630 }],
+    url: siteConfig.siteUrl,
+    images: [{ url: siteConfig.ogImagePath, width: 1200, height: 630, alt: siteConfig.defaultTitle }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -44,6 +45,42 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },
 };
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.siteUrl,
+      logo: absoluteUrl(siteConfig.encodedLogoPath),
+      email: siteConfig.email,
+      telephone: siteConfig.phoneDisplay,
+    },
+    {
+      '@type': 'ConstructionCompany',
+      name: siteConfig.name,
+      url: siteConfig.siteUrl,
+      image: absoluteUrl(siteConfig.ogImagePath),
+      logo: absoluteUrl(siteConfig.encodedLogoPath),
+      telephone: siteConfig.phoneDisplay,
+      email: siteConfig.email,
+      address: {
+        '@type': 'PostalAddress',
+        ...siteConfig.address,
+      },
+      areaServed: siteConfig.serviceAreas.map((location) => ({
+        '@type': 'City',
+        name: location.name,
+      })),
+    },
+    {
+      '@type': 'WebSite',
+      name: siteConfig.name,
+      url: siteConfig.siteUrl,
+    },
+  ],
+}
 
 export default function RootLayout({
   children,
@@ -55,12 +92,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface min-h-screen flex flex-col`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
         <Header />
         <main className="flex-grow">
           {children}
         </main>
         <Footer />
-        <ContactModal />
       </body>
     </html>
   );

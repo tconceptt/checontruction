@@ -1,33 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MotionDiv } from './MotionDiv';
-
-const projects = [
-  {
-    image: "/images/project-1.jpg",
-    title: "Bole District Office Tower",
-    category: "Commercial High-Rise",
-    alt: "Bole District Office Tower construction project in Addis Ababa by Che Construction",
-  },
-  {
-    image: "/images/project-2.jpg",
-    title: "Hawassa Industrial Park",
-    category: "Industrial Complex",
-    alt: "Hawassa Industrial Park construction in Ethiopia by Che Construction PLC",
-  },
-  {
-    image: "/images/project-3.jpg",
-    title: "Meskel Square Commercial Complex",
-    category: "Commercial",
-    alt: "Meskel Square Commercial Complex under construction in Addis Ababa by Che Construction",
-  },
-  {
-    image: "/images/project-4.jpg",
-    title: "CMC Residential Development",
-    category: "Residential",
-    alt: "CMC Residential Development project in Addis Ababa, Ethiopia by Che Construction PLC",
-  }
-];
+import { projects } from '@/lib/projects-data';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -85,6 +59,7 @@ export default function FeaturedProjects() {
         >
           {/* Large Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
+            <Link href={`/projects/${projects[0].slug}`} className="absolute inset-0 z-10" aria-label={projects[0].title} />
             <Image
               src={projects[0].image}
               alt={projects[0].alt}
@@ -108,6 +83,7 @@ export default function FeaturedProjects() {
 
           {/* Small Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
+             <Link href={`/projects/${projects[1].slug}`} className="absolute inset-0 z-10" aria-label={projects[1].title} />
              <Image
               src={projects[1].image}
               alt={projects[1].alt}
@@ -124,6 +100,7 @@ export default function FeaturedProjects() {
 
           {/* Small Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
+             <Link href={`/projects/${projects[2].slug}`} className="absolute inset-0 z-10" aria-label={projects[2].title} />
              <Image
               src={projects[2].image}
               alt={projects[2].alt}
@@ -140,6 +117,7 @@ export default function FeaturedProjects() {
 
           {/* Large Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
+             <Link href={`/projects/${projects[3].slug}`} className="absolute inset-0 z-10" aria-label={projects[3].title} />
              <Image
               src={projects[3].image}
               alt={projects[3].alt}

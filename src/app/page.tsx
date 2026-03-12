@@ -1,48 +1,61 @@
 import type { Metadata } from 'next'
-import type { WithContext, GeneralContractor } from 'schema-dts'
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import CompanyValues from "@/components/CompanyValues";
+import FAQSection from '@/components/FAQSection';
+import LocationsSection from '@/components/LocationsSection';
+import { siteConfig } from '@/lib/site-data';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Best Construction Company in Ethiopia | Che Construction PLC',
+    absolute: siteConfig.defaultTitle,
   },
-  description: "Che Construction PLC — Ethiopia's leading general contractor. Building construction, road infrastructure, and renovation projects across Addis Ababa and Ethiopia.",
-  alternates: { canonical: 'https://checonstruction.et' },
+  description:
+    "Che Construction PLC is a construction company in Ethiopia delivering building construction, road infrastructure, and renovation projects across Addis Ababa and key regional cities.",
+  alternates: { canonical: siteConfig.siteUrl },
   openGraph: {
-    title: 'Best Construction Company in Ethiopia | Che Construction PLC',
-    description: "Ethiopia's trusted general contractor. Projects across Addis Ababa, Hawassa, Bahir Dar, and Dire Dawa.",
-    url: 'https://checonstruction.et',
-    images: [{ url: '/opengraph-image.jpg', width: 1200, height: 630, alt: 'Che Construction PLC — Building Ethiopia' }],
+    title: siteConfig.defaultTitle,
+    description:
+      "Building construction, road infrastructure, and renovation services across Addis Ababa, Hawassa, Bahir Dar, and Dire Dawa.",
+    url: siteConfig.siteUrl,
+    images: [{ url: siteConfig.ogImagePath, width: 1200, height: 630, alt: 'Che Construction PLC — Building Ethiopia' }],
   },
 }
 
-const jsonLd: WithContext<GeneralContractor> = {
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'GeneralContractor',
-  name: 'Che Construction PLC',
-  url: 'https://checonstruction.et',
-  telephone: '+251911084409',
-  email: 'info@checonstruction.et',
-  logo: 'https://checonstruction.et/Logos/t-che-2-as.png',
-  description: 'Best construction company in Ethiopia offering building construction, road infrastructure, and renovation services.',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Brix Building, 1st Floor',
-    addressLocality: 'Lemi Kura, Addis Ababa',
-    addressRegion: 'Addis Ababa',
-    addressCountry: 'ET',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Addis Ababa' },
-    { '@type': 'City', name: 'Hawassa' },
-    { '@type': 'City', name: 'Bahir Dar' },
-    { '@type': 'City', name: 'Dire Dawa' },
-    { '@type': 'Country', name: 'Ethiopia' },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: siteConfig.defaultTitle,
+      url: siteConfig.siteUrl,
+      description:
+        "Che Construction PLC is a construction company in Ethiopia delivering building construction, road infrastructure, and renovation projects across Addis Ababa and key regional cities.",
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: siteConfig.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: siteConfig.siteUrl,
+        },
+      ],
+    },
   ],
-  knowsAbout: ['Building Construction', 'Road Construction', 'Infrastructure Development', 'Renovation'],
 }
 
 export default function Home() {
@@ -58,6 +71,12 @@ export default function Home() {
       <Services />
       <FeaturedProjects />
       <CompanyValues />
+      <LocationsSection />
+      <FAQSection
+        title="Questions About Choosing a Construction Company in Ethiopia"
+        intro="These answers reinforce the core entity details, service coverage, and location signals that both search engines and AI systems look for when evaluating local authority."
+        items={siteConfig.faq}
+      />
     </>
   );
 }

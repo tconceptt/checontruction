@@ -1,6 +1,7 @@
 import { ShieldCheck, Trophy, Target } from 'lucide-react';
 import { MotionDiv } from './MotionDiv';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -41,8 +42,13 @@ export default function CompanyValues() {
                 <span className="font-semibold text-primary">Ethiopian Ground</span>
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed font-light">
-                Che Construction has been shaping the skylines of Addis Ababa and Ethiopian cities for over two decades. We build structures that serve communities and stand as lasting marks of quality, backed by an uncompromising commitment to structural integrity.
+                Che Construction has been shaping the skylines of Addis Ababa and Ethiopian cities for over two decades. We build structures that serve communities and stand as lasting marks of quality, backed by an uncompromising commitment to structural integrity, delivery discipline, and long-term performance.
               </p>
+              <div className="pt-4">
+                <Link href="/about" className="text-sm font-semibold uppercase tracking-[0.15em] text-primary hover:text-primary-dark transition-colors">
+                  View Company Profile
+                </Link>
+              </div>
             </MotionDiv>
 
             <MotionDiv variants={fadeUpVariant} className="grid grid-cols-2 gap-10 border-t border-gray-100 pt-10">

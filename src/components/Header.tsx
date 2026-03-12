@@ -10,23 +10,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
-  { href: '/#about', label: 'About Us' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const openContact = () => {
-    window.dispatchEvent(new CustomEvent('open-contact'));
-    setIsMobileMenuOpen(false);
-  };
-
   const isActive = (href: string) => {
-    if (href.includes('#')) return false;
-    return pathname === href;
+    if (href === '/') {
+      return pathname === href
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`)
   };
 
   return (
@@ -53,18 +52,17 @@ export default function Header() {
                   isActive(link.href)
                     ? "text-primary border-b-2 border-primary pb-1 font-semibold"
                     : "text-gray-500 hover:text-primary"
-                )}
+                  )}
               >
                 {link.label}
               </Link>
             ))}
-            <button onClick={openContact} className="text-sm font-medium text-gray-500 hover:text-primary transition-colors leading-none">Contact</button>
           </nav>
 
           <div className="hidden md:flex">
-            <button onClick={openContact} className="bg-primary text-white px-6 py-2.5 rounded text-sm font-semibold hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(30,58,95,0.39)] hover:shadow-[0_6px_20px_rgba(30,58,95,0.23)] hover:-translate-y-0.5">
+            <Link href="/contact" className="bg-primary text-white px-6 py-2.5 rounded text-sm font-semibold hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(30,58,95,0.39)] hover:shadow-[0_6px_20px_rgba(30,58,95,0.23)] hover:-translate-y-0.5">
               Request Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -101,11 +99,10 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <button onClick={openContact} className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Contact</button>
               <div className="pt-4">
-                <button onClick={openContact} className="w-full bg-primary text-white px-6 py-3 rounded text-base font-semibold hover:bg-primary-dark transition-all shadow-md">
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block w-full bg-primary text-white px-6 py-3 rounded text-base font-semibold hover:bg-primary-dark transition-all shadow-md text-center">
                   Request Quote
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>

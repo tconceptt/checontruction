@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -30,15 +31,15 @@ export default function Hero() {
             ></motion.div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
-              ETHIOPIA'S LEADING <br className="hidden sm:block" />
-              <span className="text-primary relative inline-block">CONSTRUCTION COMPANY
+              CONSTRUCTION EXCELLENCE <br className="hidden sm:block" />
+              <span className="text-primary relative inline-block">ACROSS ETHIOPIA
                 <svg className="absolute -bottom-2 w-full h-3 text-accent/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
                 </svg>
               </span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg font-medium leading-relaxed">
-              From building construction to road infrastructure, Che Construction PLC delivers trusted, quality-driven projects across Addis Ababa, Hawassa, and cities throughout Ethiopia.
+              Che Construction PLC is positioned as a leading construction company in Ethiopia, delivering building construction, road infrastructure, and renovation work across Addis Ababa, Hawassa, Bahir Dar, Dire Dawa, and other Ethiopian markets.
             </p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -46,15 +47,15 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex gap-4"
             >
-              <button 
-                onClick={() => window.dispatchEvent(new CustomEvent('open-contact'))}
+              <Link 
+                href="/contact"
                 className="bg-primary text-white px-8 py-3.5 rounded font-semibold hover:bg-primary-dark transition-all text-lg shadow-[0_4px_14px_0_rgba(30,58,95,0.39)] hover:shadow-[0_6px_20px_rgba(30,58,95,0.23)] hover:-translate-y-0.5"
               >
                 Request Quote
-              </button>
-              <button className="bg-white text-primary border border-primary/20 px-8 py-3.5 rounded font-semibold hover:bg-gray-50 transition-all text-lg shadow-sm hover:shadow">
+              </Link>
+              <Link href="/projects" className="bg-white text-primary border border-primary/20 px-8 py-3.5 rounded font-semibold hover:bg-gray-50 transition-all text-lg shadow-sm hover:shadow">
                 Our Projects
-              </button>
+              </Link>
             </motion.div>
             
             {/* Stats */}

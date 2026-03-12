@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import FooterCTA from './FooterCTA';
+import { formatPhoneHref, siteConfig } from '@/lib/site-data';
 
 export default function Footer() {
   return (
@@ -38,17 +39,6 @@ export default function Footer() {
             <p className="text-gray-500 mb-10 leading-relaxed pr-8 text-base font-medium">
               {"Ethiopia's trusted general contractor delivering building construction, road infrastructure, and renovation projects across Addis Ababa and beyond."}
             </p>
-            <div className="flex gap-4">
-               <div className="w-12 h-12 border border-gray-800 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#04080D] transition-all cursor-pointer font-black text-sm">
-                 IN
-               </div>
-               <div className="w-12 h-12 border border-gray-800 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#04080D] transition-all cursor-pointer font-black text-sm">
-                 FB
-               </div>
-               <div className="w-12 h-12 border border-gray-800 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#04080D] transition-all cursor-pointer font-black text-sm">
-                 X
-               </div>
-            </div>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-6">
@@ -57,27 +47,28 @@ export default function Footer() {
               <ul className="space-y-6 text-sm text-gray-400 font-medium">
                 <li className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">Brix Building, Lemi Kura, 1st Floor<br />Addis Ababa, Ethiopia</span>
+                  <span className="leading-relaxed">{siteConfig.addressLabel[0]}<br />{siteConfig.addressLabel[1]}</span>
                 </li>
                 <li className="flex items-center gap-4">
                   <Phone className="w-5 h-5 text-accent shrink-0" />
-                  <a href="tel:+251911084409" className="font-bold tracking-wider text-white hover:text-accent transition-colors">+251 911 084 409</a>
+                  <a href={formatPhoneHref(siteConfig.phoneHref)} className="font-bold tracking-wider text-white hover:text-accent transition-colors">{siteConfig.phoneDisplay}</a>
                 </li>
                 <li className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-accent shrink-0" />
-                  <a href="mailto:info@checonstruction.et" className="font-bold tracking-wider text-white hover:text-accent transition-colors">info@checonstruction.et</a>
+                  <a href={`mailto:${siteConfig.email}`} className="font-bold tracking-wider text-white hover:text-accent transition-colors">{siteConfig.email}</a>
                 </li>
               </ul>
             </address>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-10">
-            <h3 className="text-white font-black uppercase tracking-widest text-sm mb-8">Quick Links</h3>
+            <h3 className="text-white font-black uppercase tracking-widest text-sm mb-8">Explore</h3>
             <ul className="space-y-5 text-sm font-black tracking-widest uppercase text-gray-500">
+              <li><Link href="/about" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Company Profile</Link></li>
               <li><Link href="/services" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Our Expertise</Link></li>
               <li><Link href="/projects" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Selected Works</Link></li>
-              <li><Link href="/#about" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Company Profile</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Careers</Link></li>
+              <li><Link href="/locations" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Areas Served</Link></li>
+              <li><Link href="/contact" className="hover:text-accent transition-colors flex items-center gap-3"><span className="w-2 h-2 bg-gray-800"></span> Contact</Link></li>
             </ul>
           </div>
 
@@ -85,10 +76,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-black uppercase tracking-widest text-gray-600">
           <p>© {new Date().getFullYear()} Che Construction. All Rights Reserved.</p>
-          <div className="mt-6 md:mt-0 flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
+          <Link href="/contact" className="mt-6 md:mt-0 hover:text-white transition-colors">Request Quote</Link>
         </div>
       </div>
     </footer>

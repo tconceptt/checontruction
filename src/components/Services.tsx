@@ -1,27 +1,9 @@
 import Link from 'next/link';
 import { Building2, Ruler, HardHat } from 'lucide-react';
 import { MotionDiv } from './MotionDiv';
+import { services } from '@/lib/services-data';
 
-const services = [
-  {
-    icon: Building2,
-    title: 'Building Construction',
-    description: 'Delivering commercial buildings, office towers, and high-end facilities across Addis Ababa with precision craftsmanship and proven engineering expertise.',
-    number: '01'
-  },
-  {
-    icon: HardHat,
-    title: 'Road & Infrastructure',
-    description: 'Building the backbone of Ethiopian cities: road networks, bridges, and critical civil infrastructure that connects communities and drives national development.',
-    number: '02'
-  },
-  {
-    icon: Ruler,
-    title: 'Renovation & Remodeling',
-    description: 'Transforming existing structures with comprehensive renovation solutions that meet local building standards and breathe new life into Ethiopian properties.',
-    number: '03'
-  },
-];
+const icons = [Building2, HardHat, Ruler];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -88,30 +70,33 @@ export default function Services() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
         >
-          {services.map((service, index) => (
+          {services.map((service, index) => {
+            const Icon = icons[index];
+
+            return (
             <MotionDiv
               variants={itemVariants}
-              key={index}
+              key={service.slug}
               className="group relative"
             >
               <div className="text-gray-800/20 text-[100px] leading-none font-light absolute -top-16 -left-6 z-0 group-hover:text-gray-700/30 transition-colors duration-700 select-none">
-                {service.number}
+                {String(index + 1).padStart(2, '0')}
               </div>
 
               <div className="relative z-10 border-t border-gray-800 pt-8 group-hover:border-gray-500 transition-colors duration-700 h-full flex flex-col">
                 <div className="mb-10 w-16 h-16 flex items-center justify-center rounded-full border border-gray-800/60 text-gray-500 group-hover:text-white group-hover:border-white/20 group-hover:bg-white/5 transition-all duration-700 bg-gray-900/30">
-                  <service.icon className="w-7 h-7" strokeWidth={1} />
+                  <Icon className="w-7 h-7" strokeWidth={1} />
                 </div>
 
                 <h3 className="text-xl font-medium text-white mb-4 tracking-wide leading-tight">
-                  {service.title}
+                  {service.shortTitle}
                 </h3>
 
                 <p className="text-gray-500 leading-relaxed flex-grow text-sm mb-8 font-light">
-                  {service.description}
+                  {service.summary}
                 </p>
 
-                <Link href="/services" className="mt-auto inline-flex items-center text-gray-400 font-medium uppercase text-xs tracking-widest group/btn w-max hover:text-white transition-colors duration-500">
+                <Link href={`/services/${service.slug}`} className="mt-auto inline-flex items-center text-gray-400 font-medium uppercase text-xs tracking-widest group/btn w-max hover:text-white transition-colors duration-500">
                   <span className="mr-4">Explore Scope</span>
                   <div className="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center group-hover/btn:border-gray-500 group-hover/btn:text-white transition-all duration-500">
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +106,8 @@ export default function Services() {
                 </Link>
               </div>
             </MotionDiv>
-          ))}
+            );
+          })}
         </MotionDiv>
       </div>
     </section>
