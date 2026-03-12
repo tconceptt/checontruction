@@ -129,7 +129,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <div className="rounded-sm border border-gray-200 bg-white p-8">
-            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Why This Service Competes</p>
+            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Why Clients Choose This Service</p>
             <ul className="space-y-4 text-gray-700 leading-relaxed">
               {service.differentiators.map((item) => (
                 <li key={item} className="border-l-2 border-accent pl-4">
@@ -152,8 +152,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Project examples tied to this service
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Internal project links help search engines connect service intent to cities, categories, and case
-              examples across the site.
+              These project examples show how Che Construction PLC applies this service across different
+              project types, categories, and locations.
             </p>
           </div>
 
@@ -171,7 +171,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       <FAQSection
         title={`Questions About ${service.shortTitle}`}
-        intro="These answers reinforce service scope, delivery context, and market relevance."
+        intro="These answers explain the scope of the service, where it is applied, and what clients can expect from delivery."
         items={service.faq}
       />
 

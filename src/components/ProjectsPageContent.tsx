@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { MotionDiv } from './MotionDiv'
 import { projects } from '@/lib/projects-data'
 
@@ -45,9 +44,9 @@ export default function ProjectsPageContent() {
               <span className="font-semibold">Across Ethiopia</span>
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
-              This project archive now includes dedicated detail pages for each featured scheme, helping
-              search engines connect project types, cities, and service capabilities to the Che Construction
-              PLC brand.
+              This portfolio highlights the range of work Che Construction PLC undertakes across Ethiopia,
+              from commercial and residential buildings to infrastructure and renovation projects in key
+              regional markets.
             </p>
           </MotionDiv>
         </div>
@@ -82,7 +81,6 @@ export default function ProjectsPageContent() {
 
               return (
                 <MotionDiv key={project.slug} variants={itemVariants} className={cardClassName}>
-                  <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-10" aria-label={project.title} />
                   <Image
                     src={project.image}
                     alt={project.alt}
@@ -91,21 +89,6 @@ export default function ProjectsPageContent() {
                     className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700" />
-                  <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
-                    <svg
-                      className="w-5 h-5 transform -rotate-45"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M5 10l7-7m0 0l7 7m-7-7v18"
-                      />
-                    </svg>
-                  </div>
                   <div className={largeCard ? 'absolute bottom-12 left-10 right-10' : 'absolute bottom-10 left-8 right-8'}>
                     <span className={categoryClassName}>{project.category}</span>
                     <h2 className={titleClassName}>{project.title}</h2>

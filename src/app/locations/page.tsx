@@ -54,8 +54,8 @@ export default function LocationsPage() {
               Construction Coverage Across Ethiopia
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              These location pages help the site compete for city-specific searches in addition to national
-              construction terms. Each page ties a market to relevant services and nearby project examples.
+              These location pages highlight where Che Construction PLC works and how its services align with
+              the needs of different cities and regional markets across Ethiopia.
             </p>
           </div>
         </div>

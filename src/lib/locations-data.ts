@@ -77,7 +77,7 @@ export const locations: Location[] = [
     intro:
       "Bahir Dar is positioned as a core regional market for road and infrastructure work delivered by Che Construction PLC.",
     summary:
-      "The company highlights Bahir Dar for ring road and civil works, making this location page relevant for infrastructure-focused search intent in Ethiopia.",
+      "The company highlights Bahir Dar for ring road and civil works, reflecting a strong fit for infrastructure-led projects in the region.",
     primaryServices: ["road-infrastructure", "building-construction"],
     keywords: [
       "construction company Bahir Dar",

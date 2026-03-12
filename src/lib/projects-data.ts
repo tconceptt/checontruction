@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "Regional project planning and delivery",
     ],
     result:
-      "The project supports the company's visibility for industrial construction and regional delivery capability in Ethiopia.",
+      "The project reflects the company's capacity for industrial construction and coordinated delivery in a major regional growth market.",
     relatedServiceSlug: "building-construction",
     updatedAt: "2026-03-12",
   },
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     description:
       "Mixed-use commercial complex near Meskel Square combining retail, office, and hospitality spaces.",
     longDescription:
-      "This mixed-use project showcases city-center construction capability with multiple user requirements in one development. It strengthens the firm's relevance for commercial construction searches tied to Addis Ababa.",
+      "This mixed-use project showcases city-center construction capability with multiple user requirements in one development. It highlights the firm's ability to deliver commercial work in Addis Ababa's urban core.",
     image: "/images/project-3.jpg",
     alt: "Meskel Square Commercial Complex under construction in Addis Ababa by Che Construction",
     scope: [
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     description:
       "Premium residential towers in the CMC area offering modern living for Addis Ababa's growing professional class.",
     longDescription:
-      "The CMC Residential Development illustrates residential construction capability in one of Addis Ababa's major growth areas. It supports visibility for housing, apartment, and tower-related search intent.",
+      "The CMC Residential Development illustrates residential construction capability in one of Addis Ababa's major growth areas. It reflects the company's ability to deliver housing and tower projects in fast-developing neighborhoods.",
     image: "/images/project-4.jpg",
     alt: "CMC Residential Development project in Addis Ababa, Ethiopia by Che Construction PLC",
     scope: [
@@ -94,7 +94,7 @@ export const projects: Project[] = [
       "Finishing and infrastructure coordination",
     ],
     result:
-      "The project expands the company's relevance for residential construction searches in Addis Ababa.",
+      "The project adds depth to the company's residential construction portfolio in Addis Ababa.",
     relatedServiceSlug: "building-construction",
     updatedAt: "2026-03-12",
   },
@@ -115,7 +115,7 @@ export const projects: Project[] = [
       "Regional transport infrastructure delivery",
     ],
     result:
-      "The project strengthens ranking potential for road construction and civil infrastructure terms in Ethiopia.",
+      "The project demonstrates experience in road construction and regional civil infrastructure delivery.",
     relatedServiceSlug: "road-infrastructure",
     updatedAt: "2026-03-12",
   },
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     description:
       "Comprehensive renovation of a heritage commercial building, preserving architectural character while modernizing interiors.",
     longDescription:
-      "This renovation project shows the company's ability to improve existing assets while respecting context and continued usability. It supports visibility for restoration, renovation, and building upgrade terms in Ethiopia.",
+      "This renovation project shows the company's ability to improve existing assets while respecting context and continued usability. It reflects a practical approach to modernization, restoration, and building renewal.",
     image: "/images/project-6.jpg",
     alt: "Dire Dawa Heritage Renovation project in Ethiopia by Che Construction PLC",
     scope: [
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "Selective structural and finish renewal",
     ],
     result:
-      "The project adds authority for renovation and remodeling searches centered on Dire Dawa and similar urban contexts.",
+      "The project demonstrates renovation capability in Dire Dawa and similar urban settings where existing buildings need careful renewal.",
     relatedServiceSlug: "renovation-remodeling",
     updatedAt: "2026-03-12",
   },

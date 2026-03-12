@@ -60,8 +60,8 @@ export default function AboutPage() {
             <p className="text-lg text-gray-600 leading-relaxed">
               Che Construction PLC presents itself as a multidisciplinary contractor delivering building
               construction, road infrastructure, and renovation services from Addis Ababa into major regional
-              markets. This page is designed to strengthen trust, clarify the company entity, and support
-              branded and non-branded search visibility.
+              markets. The company focuses on dependable delivery, practical execution, and long-term value
+              for clients building across Ethiopia.
             </p>
           </div>
         </div>
@@ -72,17 +72,16 @@ export default function AboutPage() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-4">Company Profile</p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-5">
-              Clear positioning matters for search visibility
+              Built around capability, discipline, and reliability
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              To rank for competitive terms such as <strong>best construction company in Ethiopia</strong>, a
-              site needs more than a headline. It needs consistent identity data, crawlable service pages,
-              geographic relevance, and clear internal links that reinforce expertise. This revision adds all
-              of those pieces to the Che Construction PLC website.
+              Che Construction PLC is structured around the needs clients care about most: capable teams,
+              disciplined delivery, and strong coordination from planning through handover. The company brings
+              together building construction, infrastructure delivery, and renovation support under one brand.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              The company now has a stronger profile around its headquarters, its service areas, and its core
-              delivery lines so Google and AI systems can connect the same business entity across pages.
+              From its base in Addis Ababa, the company highlights work across several major Ethiopian markets
+              while keeping quality, communication, and schedule control at the center of each project.
             </p>
           </div>
 
@@ -107,9 +106,9 @@ export default function AboutPage() {
               One company, three major construction disciplines
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              The service architecture now mirrors the site&apos;s main search themes: building construction,
-              road and infrastructure construction, and renovation/remodeling. Each service page contains its
-              own metadata, structured data, location signals, and related project links.
+              Che Construction PLC&apos;s work is presented across three core disciplines: building
+              construction, road and infrastructure delivery, and renovation and remodeling. Together, these
+              service lines reflect the breadth of work the company undertakes across Ethiopia.
             </p>
           </div>
 
@@ -140,7 +139,7 @@ export default function AboutPage() {
 
       <FAQSection
         title="Questions About Che Construction PLC"
-        intro="These answers support entity clarity and reinforce the company profile with consistent, crawlable information."
+        intro="These answers give a clearer overview of the company, its service areas, and the way it approaches project delivery."
         items={siteConfig.faq}
       />
     </>

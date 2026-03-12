@@ -123,11 +123,11 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           </div>
 
           <div className="rounded-sm border border-gray-200 bg-white p-8">
-            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Why This City Page Matters</p>
+            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Local Delivery Focus</p>
             <p className="text-gray-700 leading-relaxed">
-              Google often rewards local relevance when a business publishes city-level landing pages that
-              align service copy, project examples, and company identity. This page gives {location.name} its
-              own indexable context instead of relying only on brief homepage mentions.
+              Che Construction PLC brings a practical delivery approach to {location.name}, combining relevant
+              services, regional experience, and project coordination suited to the local market. This page
+              brings that city-specific focus together in one place.
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
 
       <FAQSection
         title={`Questions About ${location.name}`}
-        intro="These entries support local relevance and reinforce the city-level construction intent."
+        intro={`These answers give more context on Che Construction PLC's work and service focus in ${location.name}.`}
         items={location.faq}
       />
     </>

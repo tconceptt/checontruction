@@ -40,10 +40,9 @@ export default function ServicesPageContent() {
               <span className="font-semibold">Across Ethiopia</span>
             </h1>
             <p className="text-gray-400 text-base leading-relaxed font-light max-w-3xl">
-              Che Construction PLC covers the three service pillars that matter most for broad search
-              visibility in this sector: building construction, road and infrastructure construction, and
-              renovation and remodeling. Each service now has a dedicated landing page with crawlable
-              project and location context.
+              Che Construction PLC brings together building construction, road and infrastructure delivery,
+              and renovation and remodeling services to support commercial, civil, industrial, and
+              residential projects across Ethiopia.
             </p>
           </MotionDiv>
         </div>

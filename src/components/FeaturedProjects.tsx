@@ -59,7 +59,6 @@ export default function FeaturedProjects() {
         >
           {/* Large Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
-            <Link href={`/projects/${projects[0].slug}`} className="absolute inset-0 z-10" aria-label={projects[0].title} />
             <Image
               src={projects[0].image}
               alt={projects[0].alt}
@@ -69,12 +68,6 @@ export default function FeaturedProjects() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
 
-            <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
-              <svg className="w-5 h-5 transform -rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </div>
-
             <div className="absolute bottom-12 left-10 right-10">
               <span className="text-gray-300 font-medium tracking-[0.2em] uppercase text-xs mb-3 block">{projects[0].category}</span>
               <h3 className="text-white text-3xl lg:text-4xl font-semibold tracking-wide">{projects[0].title}</h3>
@@ -83,7 +76,6 @@ export default function FeaturedProjects() {
 
           {/* Small Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
-             <Link href={`/projects/${projects[1].slug}`} className="absolute inset-0 z-10" aria-label={projects[1].title} />
              <Image
               src={projects[1].image}
               alt={projects[1].alt}
@@ -100,7 +92,6 @@ export default function FeaturedProjects() {
 
           {/* Small Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
-             <Link href={`/projects/${projects[2].slug}`} className="absolute inset-0 z-10" aria-label={projects[2].title} />
              <Image
               src={projects[2].image}
               alt={projects[2].alt}
@@ -117,7 +108,6 @@ export default function FeaturedProjects() {
 
           {/* Large Card */}
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
-             <Link href={`/projects/${projects[3].slug}`} className="absolute inset-0 z-10" aria-label={projects[3].title} />
              <Image
               src={projects[3].image}
               alt={projects[3].alt}
@@ -126,12 +116,6 @@ export default function FeaturedProjects() {
               className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
-
-            <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
-              <svg className="w-5 h-5 transform -rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </div>
 
             <div className="absolute bottom-12 left-10 right-10">
               <span className="text-gray-300 font-medium tracking-[0.2em] uppercase text-xs mb-3 block">{projects[3].category}</span>

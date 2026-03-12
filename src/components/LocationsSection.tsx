@@ -12,8 +12,8 @@ export default function LocationsSection() {
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             Che Construction PLC is based in Addis Ababa and highlights project delivery across several major
-            Ethiopian markets. These location pages strengthen local relevance for Google and AI search while
-            giving clients clearer context by city.
+            Ethiopian markets. These city pages give clients a clearer sense of where the company works and
+            how its services align with local project needs.
           </p>
         </div>
 

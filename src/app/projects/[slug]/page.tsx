@@ -116,7 +116,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <div className="rounded-sm border border-gray-200 bg-white p-8">
-            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Search Relevance</p>
+            <p className="text-sm uppercase tracking-[0.15em] text-gray-500 mb-6">Project Impact</p>
             <p className="text-gray-700 leading-relaxed mb-5">{project.result}</p>
             {relatedService ? (
               <Link href={`/services/${relatedService.slug}`} className="text-primary font-semibold hover:text-primary-dark transition-colors">
