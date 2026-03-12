@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-pages-and-content 02-01-PLAN.md
-last_updated: "2026-03-12T12:07:56.485Z"
+stopped_at: Completed 02-pages-and-content 02-03-PLAN.md checkpoint approved
+last_updated: "2026-03-12T12:29:27.297Z"
 last_activity: 2026-03-11 — Roadmap created, phases derived from requirements
 progress:
   total_phases: 2
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-seo-foundation P03 | 8min | 2 tasks | 12 files |
 | Phase 02-pages-and-content P02 | 8min | 2 tasks | 4 files |
 | Phase 02-pages-and-content P01 | 3min | 2 tasks | 2 files |
+| Phase 02-pages-and-content P03 | 5min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [Phase 02-pages-and-content]: City names displayed as uppercase tracking text on card overlays for Ethiopian location signals
 - [Phase 02-pages-and-content]: Used @graph JSON-LD pattern for 3 Service schema objects on /services page — avoids validator errors from multiple WithContext objects
 - [Phase 02-pages-and-content]: ServicesPageContent is a Server Component; FooterCTA client component imported as leaf node
+- [Phase 02-pages-and-content]: usePathname active detection: /#about treated as active when pathname === '/' since About Us has no dedicated route in this phase
+- [Phase 02-pages-and-content]: navLinks data array avoids duplication between desktop and mobile nav renders
 
 ### Pending Todos
 
@@ -90,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T12:07:56.483Z
-Stopped at: Completed 02-pages-and-content 02-01-PLAN.md
+Last session: 2026-03-12T12:29:27.295Z
+Stopped at: Completed 02-pages-and-content 02-03-PLAN.md checkpoint approved
 Resume file: None

@@ -13,7 +13,7 @@ The site already exists but is SEO-blind. Phase 1 fixes the invisible foundation
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: SEO Foundation** - Fix metadata architecture, wire up structured data and crawlability infrastructure for the homepage
-- [ ] **Phase 2: Pages and Content** - Create `/services` and `/projects` routes with full content, copy, and image migration
+- [x] **Phase 2: Pages and Content** - Create `/services` and `/projects` routes with full content, copy, and image migration (completed 2026-03-12)
 
 ## Phase Details
 
@@ -44,7 +44,7 @@ Plans:
   3. Page source for `/services` and `/projects` each contain unique `<title>` tags, JSON-LD schema blocks, and at least one mention of an Ethiopian city in the body copy
   4. All images load from `/public/images/` (no external Unsplash URLs in network requests), have descriptive alt text with location context, and the site is fully usable on mobile viewport
   5. Header navigation links point to `/services` and `/projects` routes, and every page has at least one visible contact CTA
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [ ] 02-01-PLAN.md — Services page route with metadata, JSON-LD Service schema, and 3-service expanded card layout
@@ -59,4 +59,4 @@ Phases execute in numeric order: 1 → 2
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. SEO Foundation | 2/3 | In Progress|  |
-| 2. Pages and Content | 2/3 | In Progress|  |
+| 2. Pages and Content | 3/3 | Complete   | 2026-03-12 |

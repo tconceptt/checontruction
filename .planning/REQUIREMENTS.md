@@ -23,7 +23,7 @@
 - [x] **ARCH-01**: Static display components converted from `"use client"` to Server Components
 - [x] **ARCH-02**: `/services` exists as a proper Next.js route (not anchor link)
 - [x] **ARCH-03**: `/projects` exists as a proper Next.js route (not anchor link)
-- [ ] **ARCH-04**: Header navigation updated to use route links instead of anchor links
+- [x] **ARCH-04**: Header navigation updated to use route links instead of anchor links
 
 ### Content
 
@@ -85,7 +85,7 @@
 | ARCH-01 | Phase 1 | Complete |
 | ARCH-02 | Phase 2 | Complete |
 | ARCH-03 | Phase 2 | Complete |
-| ARCH-04 | Phase 2 | Pending |
+| ARCH-04 | Phase 2 | Complete |
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
 | CONT-03 | Phase 2 | Complete |

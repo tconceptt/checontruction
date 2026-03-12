@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { Building2, HardHat, Ruler } from 'lucide-react'
 import { MotionDiv } from './MotionDiv'
-import FooterCTA from './FooterCTA'
-
 const services = [
   {
     icon: Building2,
@@ -139,38 +137,6 @@ export default function ServicesPageContent() {
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-32 bg-[#060b11] border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MotionDiv
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10"
-          >
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-[1px] bg-gray-500"></div>
-                <span className="text-gray-400 font-medium uppercase tracking-[0.2em] text-xs">
-                  Get In Touch
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight leading-[1.1]">
-                Start Your{' '}
-                <span className="font-semibold">Construction Project</span>
-              </h2>
-              <p className="text-gray-400 text-base leading-relaxed font-light mt-6 max-w-lg">
-                Ready to build in Ethiopia? Our team in Addis Ababa is ready to discuss your project
-                requirements, timeline, and budget. Contact us today to get started.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <FooterCTA />
-            </div>
-          </MotionDiv>
-        </div>
-      </section>
     </>
   )
 }

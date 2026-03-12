@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   const isActive = (href: string) => {
-    if (href === '/#about') return pathname === '/';
+    if (href.includes('#')) return false;
     return pathname === href;
   };
 
@@ -43,7 +43,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -58,7 +58,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <button onClick={openContact} className="text-sm font-medium text-gray-500 hover:text-primary transition-colors">Contact</button>
+            <button onClick={openContact} className="text-sm font-medium text-gray-500 hover:text-primary transition-colors leading-none">Contact</button>
           </nav>
 
           <div className="hidden md:flex">

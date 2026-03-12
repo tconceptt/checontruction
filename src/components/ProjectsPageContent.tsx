@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { MotionDiv } from './MotionDiv'
-import FooterCTA from './FooterCTA'
 
 const projects = [
   {
@@ -338,35 +337,6 @@ export default function ProjectsPageContent() {
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-32 bg-[#060b11]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <MotionDiv
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-16 h-[1px] bg-gray-600"></div>
-              <span className="text-gray-500 font-medium uppercase tracking-[0.2em] text-xs">
-                Work With Us
-              </span>
-              <div className="w-16 h-[1px] bg-gray-600"></div>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.1] mb-6">
-              Let&rsquo;s Build Your{' '}
-              <span className="font-semibold">Next Project</span>
-            </h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-              Ready to start construction across Ethiopia? Contact our team to discuss your
-              project requirements.
-            </p>
-            <FooterCTA />
-          </MotionDiv>
-        </div>
-      </section>
     </>
   )
 }
