@@ -3,24 +3,28 @@ import { MotionDiv } from './MotionDiv';
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1541881451970-ba00978ce2ea?q=80&w=1968&auto=format&fit=crop",
+    image: "/images/project-1.jpg",
     title: "Bole District Office Tower",
     category: "Commercial High-Rise",
+    alt: "Bole District Office Tower construction project in Addis Ababa by Che Construction",
   },
   {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/project-2.jpg",
     title: "Hawassa Industrial Park",
     category: "Industrial Complex",
+    alt: "Hawassa Industrial Park construction in Ethiopia by Che Construction PLC",
   },
   {
-    image: "https://images.unsplash.com/photo-1428366890462-dd4baecf492b?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/project-3.jpg",
     title: "Meskel Square Commercial Complex",
     category: "Commercial",
+    alt: "Meskel Square Commercial Complex under construction in Addis Ababa by Che Construction",
   },
   {
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop",
+    image: "/images/project-4.jpg",
     title: "CMC Residential Development",
     category: "Residential",
+    alt: "CMC Residential Development project in Addis Ababa, Ethiopia by Che Construction PLC",
   }
 ];
 
@@ -82,8 +86,9 @@ export default function FeaturedProjects() {
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
             <Image
               src={projects[0].image}
-              alt={projects[0].title}
+              alt={projects[0].alt}
               fill
+              sizes="(max-width: 768px) 100vw, 66vw"
               className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
@@ -104,8 +109,9 @@ export default function FeaturedProjects() {
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[500px] lg:h-[600px] group overflow-hidden bg-gray-100">
              <Image
               src={projects[1].image}
-              alt={projects[1].title}
+              alt={projects[1].alt}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100 grayscale-[20%] group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
@@ -119,8 +125,9 @@ export default function FeaturedProjects() {
           <MotionDiv variants={itemVariants} className="md:col-span-4 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
              <Image
               src={projects[2].image}
-              alt={projects[2].title}
+              alt={projects[2].alt}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100 grayscale-[20%] group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>
@@ -134,8 +141,9 @@ export default function FeaturedProjects() {
           <MotionDiv variants={itemVariants} className="md:col-span-8 relative h-[450px] lg:h-[500px] group overflow-hidden bg-gray-100">
              <Image
               src={projects[3].image}
-              alt={projects[3].title}
+              alt={projects[3].alt}
               fill
+              sizes="(max-width: 768px) 100vw, 66vw"
               className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-700"></div>

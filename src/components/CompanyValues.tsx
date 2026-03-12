@@ -73,9 +73,10 @@ export default function CompanyValues() {
              {/* Brutalist image layout */}
              <div className="relative h-[600px] lg:h-[750px] w-full bg-gray-100 shadow-xl rounded-sm">
                <Image
-                 src="https://images.unsplash.com/photo-1541881451970-ba00978ce2ea?q=80&w=1968&auto=format&fit=crop"
-                 alt="Che Construction workers on site in Ethiopia"
+                 src="/images/company-values.jpg"
+                 alt="Construction workers on a building site in Ethiopia — Che Construction PLC"
                  fill
+                 sizes="(max-width: 1024px) 100vw, 50vw"
                  className="object-cover grayscale-[20%] opacity-90 rounded-sm"
                />
                <div className="absolute inset-0 border border-white/20 pointer-events-none rounded-sm"></div>

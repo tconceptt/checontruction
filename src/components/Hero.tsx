@@ -91,11 +91,12 @@ export default function Hero() {
             <div className="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-accent z-20 pointer-events-none"></div>
             
             <div className="absolute inset-0 bg-gray-200 animate-pulse z-0" />
-            <Image 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            <Image
+              src="/images/hero-construction-addis-ababa.jpg"
               alt="Construction site in Addis Ababa, Ethiopia — Che Construction PLC"
               fill
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover z-10 transition-transform duration-700 group-hover:scale-105"
             />
             {/* Gradient overlay for richness */}
