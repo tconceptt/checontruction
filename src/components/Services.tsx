@@ -1,4 +1,5 @@
-import { Building2, Ruler, HardHat, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
+import { Building2, Ruler, HardHat } from 'lucide-react';
 import { MotionDiv } from './MotionDiv';
 
 const services = [
@@ -19,12 +20,6 @@ const services = [
     title: 'Renovation & Remodeling',
     description: 'Transforming existing structures with comprehensive renovation solutions that meet local building standards and breathe new life into Ethiopian properties.',
     number: '03'
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Project Management',
-    description: 'Rigorous oversight, timeline enforcement, and transparent financial planning for construction projects of every scale across Ethiopia.',
-    number: '04'
   },
 ];
 
@@ -73,10 +68,16 @@ export default function Services() {
               What We <br className="hidden md:block"/><span className="font-semibold">Build</span>
             </h2>
           </div>
-          <div className="max-w-md border-l border-gray-800 pl-8 pb-2">
+          <div className="max-w-md border-l border-gray-800 pl-8 pb-2 flex flex-col gap-6">
             <p className="text-gray-400 text-base leading-relaxed font-light">
               From building construction to road infrastructure and renovation, our expertise spans the full spectrum of construction challenges across Addis Ababa and throughout Ethiopia.
             </p>
+            <Link href="/services" className="text-gray-300 border-b border-gray-500 pb-1 text-xs font-semibold uppercase tracking-widest hover:text-white hover:border-white transition-all flex items-center gap-3 group w-max">
+              View All Services
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </MotionDiv>
 
@@ -85,7 +86,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
         >
           {services.map((service, index) => (
             <MotionDiv
@@ -110,14 +111,14 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <div className="mt-auto inline-flex items-center text-gray-400 font-medium uppercase text-xs tracking-widest cursor-pointer group/btn w-max">
-                  <span className="mr-4 group-hover/btn:text-white transition-colors duration-500">Explore Scope</span>
+                <Link href="/services" className="mt-auto inline-flex items-center text-gray-400 font-medium uppercase text-xs tracking-widest group/btn w-max hover:text-white transition-colors duration-500">
+                  <span className="mr-4">Explore Scope</span>
                   <div className="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center group-hover/btn:border-gray-500 group-hover/btn:text-white transition-all duration-500">
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </div>
-                </div>
+                </Link>
               </div>
             </MotionDiv>
           ))}

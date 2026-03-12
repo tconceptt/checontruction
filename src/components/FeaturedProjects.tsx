@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { MotionDiv } from './MotionDiv';
 
 const projects = [
@@ -67,12 +68,12 @@ export default function FeaturedProjects() {
               Featured <br className="hidden md:block" /><span className="font-semibold">Works</span>
             </h2>
           </div>
-          <button className="text-gray-900 border-b border-gray-900 pb-1 text-xs font-semibold uppercase tracking-widest hover:text-gray-500 hover:border-gray-500 transition-all flex items-center gap-3 group">
+          <Link href="/projects" className="text-gray-900 border-b border-gray-900 pb-1 text-xs font-semibold uppercase tracking-widest hover:text-gray-500 hover:border-gray-500 transition-all flex items-center gap-3 group">
             View Full Portfolio
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </Link>
         </MotionDiv>
 
         <MotionDiv
